@@ -33,14 +33,16 @@
 }
 
 .nav-logo-img--main{
-  width:260px;
-  height:56px;
-  object-fit:cover;
+  width:286px;
+  height:58px;
+  object-fit:contain;
   object-position:center;
   background:#fff;
   border-radius:8px;
   padding:4px 8px;
 }
+
+.nav-logo-img--mobile{display:none;}
 
 .nav-actions{
   flex:1 1 auto;
