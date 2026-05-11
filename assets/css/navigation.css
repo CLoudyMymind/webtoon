@@ -37,6 +37,9 @@
   height:56px;
   object-fit:cover;
   object-position:center;
+  background:#fff;
+  border-radius:8px;
+  padding:4px 8px;
 }
 
 .nav-actions{
