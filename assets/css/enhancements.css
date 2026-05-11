@@ -1,0 +1,24 @@
+﻿/* ===== ENHANCED ANIMATIONS ===== */
+@keyframes certPulse{0%,100%{opacity:.5}50%{opacity:.8}}
+@keyframes floatUp{0%{transform:translateY(0);opacity:0}10%{opacity:.6}90%{opacity:.4}100%{transform:translateY(-120px);opacity:0}}
+@keyframes bounceIn{0%{transform:scale(.3);opacity:0}50%{transform:scale(1.1)}70%{transform:scale(.95)}100%{transform:scale(1);opacity:1}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(0,180,216,.2)}50%{box-shadow:0 0 40px rgba(0,180,216,.5),0 0 80px rgba(0,180,216,.15)}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes countDown{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
+.reveal.show{opacity:1;transform:translateY(0);}
+.reveal:nth-child(2){transition-delay:.1s}
+.reveal:nth-child(3){transition-delay:.2s}
+.glass:hover{box-shadow:0 0 30px rgba(0,180,216,.12),0 8px 32px rgba(0,0,0,.3);transition:box-shadow .35s,transform .35s;}
+.mentor-card:hover{transform:translateY(-4px);}
+.price-card:hover{box-shadow:0 0 40px rgba(0,180,216,.18),0 12px 40px rgba(0,0,0,.4);}
+.faq-item{transition:background .25s;}
+.faq-item:hover{background:rgba(0,180,216,.03)!important;}
+.faq-q:hover span:first-child{color:var(--teal);transition:color .2s;}
+#seats-count{animation:countDown 2s ease-in-out infinite;}
+.shimmer-text{background:linear-gradient(90deg,var(--teal),var(--cyan),var(--purple),var(--teal));background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite;}
+input::placeholder,select option[disabled]{color:var(--slate)!important;}
+select option{background:var(--surface);color:var(--white);}
+.parallax-bg{will-change:transform;}
+nav a:hover{color:var(--teal)!important;transition:color .2s;}

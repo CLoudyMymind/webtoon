@@ -1,0 +1,24 @@
+﻿*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#070d1a;color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;position:relative;}
+body::before,body::after{display:none;content:none;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:4px;}
+:root{
+  --bg:#070d1a;
+  --teal:#00AEB3;
+  --teal-deep:#0077A8;
+  --cyan:#00AEB3;
+  --navy:#0A2342;
+  --purple:#7C3AED;
+  --indigo:#4F46E5;
+  --orange:#FB923C;
+  --white:#F8FAFC;
+  --text:#E2E8F0;
+  --light:#CBD5E1;
+  --muted:#94A3B8;
+  --slate:#475569;
+  --slate-deep:#334155;
+  --surface:#0d1a35;
+  --danger:#EF4444;
+  --danger-soft:#FCA5A5;
+}

@@ -1,0 +1,41 @@
+﻿.audience-section{position:relative;overflow:hidden;background:#070d1a;}
+.audience-section::before{display:none;content:none;}
+.audience-shell{position:relative;max-width:1180px;margin:0 auto;}
+.audience-head{max-width:760px;margin:0 0 24px;}
+.audience-kicker{width:100%;max-width:640px;height:1px;background:linear-gradient(90deg,rgba(251,146,60,.65),rgba(0,174,179,.14),transparent);margin-bottom:12px;box-shadow:0 0 24px rgba(251,146,60,.18);}
+.audience-title{font-size:clamp(30px,5.2vw,64px);line-height:.97;font-weight:800;color:var(--white);max-width:720px;margin-bottom:8px;text-transform:uppercase;letter-spacing:-.02em;}
+.audience-title span{display:block;color:var(--teal);}
+.audience-lead{max-width:760px;font-size:18px;line-height:1.6;color:var(--light);}
+.audience-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px;}
+.audience-card{position:relative;min-height:286px;padding:18px 18px 18px;border-radius:18px;overflow:hidden;border:1px solid rgba(0,174,179,.34);background-color:#07111f;box-shadow:inset 0 0 0 1px rgba(255,255,255,.03),0 0 28px rgba(0,174,179,.08);}
+.audience-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,11,25,.22),rgba(5,11,25,.54) 46%,rgba(5,11,25,.92));z-index:0;pointer-events:none;}
+.audience-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 110%,rgba(0,174,179,.14),transparent 48%),linear-gradient(135deg,rgba(251,146,60,.05),transparent 34%);opacity:.85;z-index:0;pointer-events:none;}
+.audience-card--photo{background-size:cover;background-repeat:no-repeat;}
+.audience-card--01{background-image:url('../images/audience/audience-01-artists.png');background-position:center 18%;}
+.audience-card--02{background-image:url('../images/audience/audience-02-illustrators.png');background-position:center 24%;}
+.audience-card--03{background-image:url('../images/audience/audience-03-designers.png');background-position:34% center;}
+.audience-card--04{background-image:url('../images/audience/audience-04-architects.png');background-position:center center;}
+.audience-card--05{background-image:url('../images/audience/audience-05-digital-creators.png');background-position:center 22%;}
+.audience-card--06{background-image:url('../images/audience/audience-06-school-students.png');background-position:center 22%;}
+.audience-card--07{background-image:url('../images/audience/audience-07-creative-students.png');background-position:center 22%;}
+.audience-card__number,.audience-card__title,.audience-card__line,.audience-card__text,.audience-quote__label,.audience-quote__text{position:relative;z-index:1;}
+.audience-card__number{position:absolute;top:12px;right:16px;font-family:'Space Grotesk',sans-serif;font-size:56px;line-height:1;font-weight:700;color:rgba(196,181,253,.24);letter-spacing:-.04em;text-shadow:0 0 18px rgba(5,11,25,.45);}
+.audience-card__title{margin-top:104px;font-size:24px;line-height:1.05;font-weight:800;color:var(--orange);min-height:48px;display:flex;align-items:flex-end;text-shadow:0 2px 12px rgba(5,11,25,.75);}
+.audience-card__line{width:40px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--teal),rgba(0,174,179,.08));margin:10px 0 12px;box-shadow:0 0 16px rgba(0,174,179,.28);}
+.audience-card__text{font-size:17px;line-height:1.5;color:var(--text);max-width:230px;text-shadow:0 2px 12px rgba(5,11,25,.75);}
+.audience-card--quote{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;border-color:transparent;background:transparent;box-shadow:none;}
+.audience-card--quote::before,.audience-card--quote::after{display:none;}
+.audience-quote__label{font-size:16px;letter-spacing:.1em;font-weight:800;color:var(--orange);margin-bottom:16px;}
+.audience-quote__text{max-width:220px;font-size:34px;line-height:1.12;color:var(--white);font-weight:300;text-transform:uppercase;}
+.audience-note{display:grid;grid-template-columns:minmax(0,1.4fr) 132px minmax(0,1fr);gap:20px;align-items:center;padding:22px 24px;border-radius:24px;border:1px solid rgba(251,146,60,.3);background:linear-gradient(180deg,rgba(6,12,26,.76),rgba(8,14,28,.84));box-shadow:inset 0 0 0 1px rgba(251,146,60,.08),0 0 34px rgba(251,146,60,.06);position:relative;overflow:hidden;backdrop-filter:blur(12px);}
+.audience-note::before,.audience-note::after{display:none;content:none;}
+.audience-note__left,.audience-note__icon,.audience-note__right{position:relative;z-index:1;}
+.audience-note__eyebrow{font-size:18px;font-weight:800;letter-spacing:.04em;color:var(--orange);margin-bottom:8px;}
+.audience-note__headline{font-size:28px;line-height:1.18;color:var(--white);text-transform:uppercase;max-width:420px;}
+.audience-note__headline span{display:block;color:var(--orange);margin-top:4px;}
+.audience-note__icon{width:132px;height:132px;border-radius:22px;border:1px solid rgba(251,146,60,.3);display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(251,146,60,.05),rgba(251,146,60,.02));box-shadow:inset 0 0 0 1px rgba(251,146,60,.08);}
+.audience-note__glyph{position:relative;width:54px;height:68px;border:2px solid var(--orange);border-radius:8px;}
+.audience-note__glyph::before{content:'';position:absolute;top:10px;left:10px;right:10px;height:2px;background:var(--orange);box-shadow:0 14px 0 var(--orange),0 28px 0 var(--orange);opacity:.95;}
+.audience-note__glyph::after{content:'';position:absolute;right:-4px;top:6px;width:18px;height:18px;border-top:2px solid var(--orange);border-right:2px solid var(--orange);transform:rotate(35deg);border-radius:2px;}
+.audience-note__right p{font-size:18px;line-height:1.5;color:var(--text);}
+.audience-note__right span{color:var(--orange);font-weight:700;border-bottom:2px solid rgba(251,146,60,.6);padding-bottom:2px;}

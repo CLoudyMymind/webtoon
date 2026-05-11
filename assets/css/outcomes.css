@@ -1,0 +1,139 @@
+.course-outcomes{
+  padding:44px 24px 58px;
+  background:#070d1a;
+}
+
+.course-outcomes__inner{
+  max-width:1140px;
+  margin:0 auto;
+}
+
+.course-outcomes__title{
+  margin:0;
+  text-align:center;
+  font-size:clamp(38px,5vw,64px);
+  line-height:.98;
+  letter-spacing:.02em;
+  color:#f8fafc;
+}
+
+.course-outcomes__accent{
+  display:flex;
+  justify-content:center;
+  margin:18px 0 28px;
+}
+
+.course-outcomes__accent span{
+  position:relative;
+  width:292px;
+  height:10px;
+}
+
+.course-outcomes__accent span::before,
+.course-outcomes__accent span::after{
+  content:"";
+  position:absolute;
+  top:4px;
+  width:122px;
+  height:2px;
+  background:#11c5ca;
+}
+
+.course-outcomes__accent span::before{
+  left:0;
+}
+
+.course-outcomes__accent span::after{
+  right:0;
+}
+
+.course-outcomes__accent span{
+  background:
+    linear-gradient(135deg,transparent 0 46%,#11c5ca 46% 54%,transparent 54% 100%) center/48px 10px no-repeat;
+}
+
+.course-outcomes__grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+}
+
+.course-outcomes__card{
+  position:relative;
+  min-height:286px;
+  padding:22px 24px 24px;
+  background:linear-gradient(180deg,rgba(11,16,38,.95),rgba(7,13,26,.99));
+  border-radius:24px;
+  overflow:hidden;
+}
+
+.course-outcomes__card::before,
+.course-outcomes__card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  clip-path:inherit;
+}
+
+.course-outcomes__card::before{
+  z-index:0;
+}
+
+.course-outcomes__card::after{
+  z-index:1;
+  inset:2px;
+  background:linear-gradient(180deg,rgba(10,15,35,.97),rgba(7,13,26,.995));
+  border-radius:22px;
+}
+
+.course-outcomes__card > *{
+  position:relative;
+  z-index:2;
+}
+
+.course-outcomes__card--teal::before{
+  background:#11c5ca;
+  box-shadow:0 0 0 1px rgba(17,197,202,.9),0 0 18px rgba(17,197,202,.1);
+}
+
+.course-outcomes__card--orange::before{
+  background:#ff8f2b;
+  box-shadow:0 0 0 1px rgba(255,143,43,.9),0 0 18px rgba(255,143,43,.1);
+}
+
+.course-outcomes__card-title{
+  display:block;
+  margin:0 0 12px;
+  padding:0;
+  background:none;
+  border-radius:0;
+  font-size:22px;
+  line-height:1.14;
+  letter-spacing:.02em;
+  color:#eef4ff;
+  text-align:center;
+}
+
+.course-outcomes__card p{
+  margin:0 auto;
+  max-width:300px;
+  font-size:19px;
+  line-height:1.63;
+  color:#eef4ff;
+  text-align:center;
+}
+
+.course-outcomes__summary{
+  margin:24px auto 0;
+  max-width:980px;
+  text-align:center;
+  font-size:clamp(24px,2.8vw,40px);
+  line-height:1.15;
+  letter-spacing:.04em;
+  color:#f8fafc;
+}
+
+.course-outcomes__summary span{
+  color:#ff9634;
+}

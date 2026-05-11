@@ -1,0 +1,426 @@
+﻿.course-price{
+  padding:64px 24px 58px;
+  background:#070d1a;
+}
+
+.course-price__inner{
+  max-width:1140px;
+  margin:0 auto;
+}
+
+.course-price__top{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr);
+  gap:18px;
+  align-items:start;
+}
+
+.course-price__label{
+  margin-bottom:8px;
+}
+
+.course-price__title{
+  margin:0;
+  font-size:clamp(40px,5.6vw,68px);
+  line-height:.97;
+  letter-spacing:.02em;
+  color:#f8fafc;
+}
+
+.course-price__subtitle{
+  margin:12px 0 0;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#ff8e2a;
+}
+
+.course-price__marker{
+  display:none;
+}
+
+.course-price__amount{
+  margin-top:14px;
+  font-size:clamp(64px,8vw,112px);
+  line-height:1;
+  letter-spacing:0;
+  font-weight:800;
+  color:#00cbd1;
+  white-space:nowrap;
+}
+
+.course-price__description{
+  margin:18px 0 0;
+  font-size:17px;
+  line-height:1.5;
+  color:#edf2f7;
+  max-width:500px;
+}
+
+.card-cut{
+  --cut-size:30px;
+  --cut-inner:29px;
+  position:relative;
+  isolation:isolate;
+  padding:22px 24px 24px;
+  background:transparent;
+  clip-path:polygon(var(--cut-size) 0,100% 0,100% calc(100% - var(--cut-size)),calc(100% - var(--cut-size)) 100%,0 100%,0 var(--cut-size));
+}
+
+.card-cut--violet{
+  --card-cut-outline:#7b5cff;
+  --card-cut-glow:rgba(123,92,255,.12);
+}
+
+.card-cut--teal{
+  --card-cut-outline:#14c8d1;
+  --card-cut-glow:rgba(20,200,209,.12);
+}
+
+.card-cut::before,
+.card-cut::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  clip-path:inherit;
+}
+
+.card-cut::before{
+  z-index:0;
+  background:var(--card-cut-outline);
+  box-shadow:0 0 0 1px var(--card-cut-outline),0 0 18px var(--card-cut-glow);
+}
+
+.card-cut::after{
+  z-index:1;
+  inset:2px;
+  background:linear-gradient(180deg,rgba(9,16,37,.98),rgba(7,13,26,.98));
+  clip-path:polygon(var(--cut-inner) 0,100% 0,100% calc(100% - var(--cut-inner)),calc(100% - var(--cut-inner)) 100%,0 100%,0 var(--cut-inner));
+}
+
+.card-cut > *{
+  position:relative;
+  z-index:2;
+}
+
+.course-price__special{
+  min-height:100%;
+}
+
+.course-price__special-title,
+.course-price__included-title{
+  margin:0 0 10px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:19px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#0fd2d5;
+}
+
+.course-price__special-item{
+  display:grid;
+  grid-template-columns:20px 1fr;
+  gap:12px;
+  padding:16px 0;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+
+.course-price__special-item:first-of-type{
+  border-top:none;
+  padding-top:6px;
+}
+
+.course-price__special-item--last{
+  padding-bottom:18px;
+}
+
+.course-price__special-dot{
+  width:20px;
+  height:20px;
+  margin-top:7px;
+  border-radius:50%;
+  border:2px solid rgba(11,210,216,.9);
+  box-shadow:0 0 0 4px rgba(11,210,216,.12) inset;
+  position:relative;
+}
+
+.course-price__special-dot::after{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border-radius:50%;
+  background:#0fd2d5;
+}
+
+.course-price__special-line{
+  font-size:22px;
+  line-height:1.4;
+  color:#f8fafc;
+}
+
+.course-price__special-line strong{
+  margin-right:10px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:54px;
+  line-height:.95;
+  font-weight:800;
+  color:#ff8e2a;
+  vertical-align:middle;
+}
+
+.course-price__special-note{
+  margin-top:7px;
+  font-size:17px;
+  line-height:1.55;
+  color:#dce7f5;
+}
+
+.course-price__disclaimer{
+  margin:0;
+  font-size:16px;
+  line-height:1.45;
+  color:#aebacf;
+}
+
+.course-price__bottom{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 280px;
+  gap:26px;
+  align-items:end;
+  margin-top:14px;
+}
+
+.course-price__included{
+  padding-top:30px;
+}
+
+.course-price__included-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0 24px;
+}
+
+.course-price__list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.course-price__list--right{
+  border-left:1px solid rgba(255,255,255,.14);
+  padding-left:32px;
+}
+
+.course-price__list li{
+  position:relative;
+  padding-left:20px;
+  margin:0 0 12px;
+  font-size:17px;
+  line-height:1.52;
+  color:#eef4ff;
+}
+
+.course-price__list li:last-child{
+  margin-bottom:0;
+}
+
+.course-price__list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.62em;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#0fd2d5;
+}
+
+.course-price__cta-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  justify-content:flex-end;
+  align-items:flex-end;
+}
+
+.course-price__event{
+  width:100%;
+  max-width:268px;
+  display:grid;
+  gap:9px;
+}
+
+.course-price__event-row{
+  display:grid;
+  grid-template-columns:18px 1fr;
+  gap:9px;
+  align-items:start;
+}
+
+.course-price__event-icon{
+  color:#11c5ca;
+  margin-top:3px;
+  filter:drop-shadow(0 0 10px rgba(17,197,202,.18));
+}
+
+.course-price__event-copy{
+  display:grid;
+  gap:3px;
+}
+
+.course-price__event-main{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:17px;
+  line-height:1.25;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#f8fafc;
+}
+
+.course-price__event-sub{
+  font-size:15px;
+  line-height:1.45;
+  color:#9eb1c8;
+}
+
+.course-price__cta{
+  --cta-cut-size:24px;
+  --cta-cut-inner:23px;
+  position:relative;
+  isolation:isolate;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:268px;
+  min-height:74px;
+  padding:14px 24px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:.06em;
+  color:#f8fafc;
+  text-decoration:none;
+  border:none;
+  background:transparent;
+  clip-path:polygon(var(--cta-cut-size) 0,100% 0,100% calc(100% - var(--cta-cut-size)),calc(100% - var(--cta-cut-size)) 100%,0 100%,0 var(--cta-cut-size));
+  transition:border-color .25s ease,color .25s ease,transform .25s ease,box-shadow .25s ease;
+}
+
+.course-price__cta::before,
+.course-price__cta::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  clip-path:inherit;
+}
+
+.course-price__cta::before{
+  z-index:0;
+  background:#eef4ff;
+  box-shadow:0 0 0 1px rgba(255,255,255,.92),0 0 18px rgba(255,255,255,.06);
+}
+
+.course-price__cta::after{
+  z-index:1;
+  inset:2px;
+  background:#070d1a;
+  clip-path:polygon(var(--cta-cut-inner) 0,100% 0,100% calc(100% - var(--cta-cut-inner)),calc(100% - var(--cta-cut-inner)) 100%,0 100%,0 var(--cta-cut-inner));
+}
+
+.course-price__cta > span{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+}
+
+.course-price__cta > span::after{
+  content:'›';
+  margin-left:16px;
+  font-size:34px;
+  line-height:1;
+}
+
+.course-price__cta:hover{
+  transform:translateY(-2px);
+  color:#0fd2d5;
+  box-shadow:0 16px 38px rgba(15,210,213,.12);
+}
+
+.early-registration{
+  padding:30px 20px 34px;
+  background:#070d1a;
+  border-top:1px solid rgba(255,255,255,.04);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.early-registration__inner{
+  max-width:760px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  text-align:center;
+}
+
+.early-registration__text{
+  margin:0;
+  color:#8fa0b8;
+  font-size:17px;
+  line-height:1.45;
+  font-weight:700;
+}
+
+.early-registration__text span{
+  color:#fb923c;
+}
+
+.early-registration__cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:360px;
+  min-height:58px;
+  padding:16px 34px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#ff9735,#ff711e);
+  color:#fff;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-decoration:none;
+  box-shadow:0 14px 28px rgba(255,114,32,.2);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.early-registration__cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 34px rgba(255,114,32,.28);
+}
+
+@media(max-width:520px){
+  .early-registration{
+    padding:24px 16px 28px;
+  }
+
+  .early-registration__text{
+    font-size:15px;
+  }
+
+  .early-registration__cta{
+    min-width:0;
+    width:100%;
+    max-width:360px;
+    min-height:54px;
+    padding:14px 18px;
+    font-size:15px;
+  }
+}
