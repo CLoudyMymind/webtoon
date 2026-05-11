@@ -1,0 +1,86 @@
+.floating-contact{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:120;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.floating-contact__btn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-height:42px;
+  padding:8px 12px 8px 8px;
+  border-radius:999px;
+  text-decoration:none;
+  color:#f8fafc;
+  background:rgba(7,13,26,.92);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 30px rgba(2,6,23,.28);
+  backdrop-filter:blur(10px);
+  animation:floatCrawl 3.6s ease-in-out infinite;
+}
+
+.floating-contact__btn:nth-child(2){animation-delay:.35s;}
+.floating-contact__btn:nth-child(3){animation-delay:.7s;}
+
+.floating-contact__icon{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:11px;
+  font-weight:800;
+  color:#070d1a;
+  background:#11c5ca;
+}
+
+.floating-contact__text{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.02em;
+  white-space:nowrap;
+}
+
+.floating-contact__btn--wa .floating-contact__icon{background:#2bd46f;}
+.floating-contact__btn--phone .floating-contact__icon{background:#ff9a3b;}
+.floating-contact__btn--ig .floating-contact__icon{background:linear-gradient(135deg,#ff8a3d,#ff4e7a);}
+
+.floating-contact__btn:hover{
+  transform:translateY(-2px);
+  border-color:rgba(17,197,202,.55);
+}
+
+@keyframes floatCrawl{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-4px);}
+}
+
+@media(max-width:720px){
+  .floating-contact{
+    right:10px;
+    bottom:10px;
+    gap:6px;
+  }
+
+  .floating-contact__btn{
+    min-height:38px;
+    padding:7px 10px 7px 7px;
+  }
+
+  .floating-contact__icon{
+    width:22px;
+    height:22px;
+    font-size:10px;
+  }
+
+  .floating-contact__text{
+    font-size:12px;
+  }
+}
