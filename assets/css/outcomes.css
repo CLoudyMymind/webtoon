@@ -115,7 +115,7 @@
   font-size:22px;
   line-height:1.14;
   letter-spacing:.02em;
-  color:#eef4ff;
+  color:var(--teal);
   text-align:center;
   text-shadow:0 0 16px rgba(255,255,255,.08);
 }
